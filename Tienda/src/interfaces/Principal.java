@@ -19,6 +19,10 @@ public class Principal extends javax.swing.JFrame {
     public Principal() {
         initComponents();
     }
+    public Principal(String nombre, String Cedula) {
+        initComponents();
+        
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
