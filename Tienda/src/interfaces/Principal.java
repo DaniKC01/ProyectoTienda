@@ -5,8 +5,6 @@ package interfaces;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 /**
  *
  * @author danie
@@ -18,6 +16,12 @@ public class Principal extends javax.swing.JFrame {
      */
     public Principal() {
         initComponents();
+
+    }
+
+    public Principal(String nombre, String Cedula) {
+        initComponents();
+
     }
 
     /**
@@ -56,6 +60,11 @@ public class Principal extends javax.swing.JFrame {
         jtbnModPrenda.setText("Modificar Prueba");
 
         jtbListPrendas.setText("Lista de Prendas");
+        jtbListPrendas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtbListPrendasActionPerformed(evt);
+            }
+        });
 
         jtbnVenta.setText("Realizar Venta");
 
@@ -110,7 +119,7 @@ public class Principal extends javax.swing.JFrame {
                 .addComponent(jButton6)
                 .addGap(56, 56, 56)
                 .addComponent(jtbnCerrarSesion)
-                .addContainerGap(73, Short.MAX_VALUE))
+                .addGap(25, 73, Short.MAX_VALUE))
         );
 
         pack();
@@ -127,6 +136,13 @@ public class Principal extends javax.swing.JFrame {
         jdskPrincipal.add(ven1);
         ven1.setVisible(true);
     }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jtbListPrendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbListPrendasActionPerformed
+        ListaPrendas lista = new ListaPrendas();
+        jdskPrincipal.add(lista);
+        lista.setVisible(true);
+
+    }//GEN-LAST:event_jtbListPrendasActionPerformed
 
     /**
      * @param args the command line arguments
