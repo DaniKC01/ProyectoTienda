@@ -57,7 +57,7 @@
               <Component id="jButton6" min="-2" max="-2" attributes="0"/>
               <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
               <Component id="jtbnCerrarSesion" min="-2" max="-2" attributes="0"/>
-              <EmptySpace pref="73" max="32767" attributes="0"/>
+              <EmptySpace min="25" pref="73" max="32767" attributes="0"/>
           </Group>
       </Group>
     </DimensionLayout>
@@ -92,6 +92,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Lista de Prendas"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtbListPrendasActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jtbnVenta">
       <Properties>
