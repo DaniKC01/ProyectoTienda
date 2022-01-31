@@ -164,39 +164,52 @@ public class Principal extends javax.swing.JFrame {
         ListaPrendas lista = new ListaPrendas();
         jdskPrincipal.add(lista);
         lista.setVisible(true);
-
     }//GEN-LAST:event_jtbListPrendasActionPerformed
+
 
     private void jtbnVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnVentaActionPerformed
         // TODO add your handling code here:
         
-        RegistroVenta a = new RegistroVenta(ced);
-        jdskPrincipal.add(a);
-        a.setVisible(true);
+       
     }//GEN-LAST:event_jtbnVentaActionPerformed
 
     private void jtbnIngPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnIngPrendaActionPerformed
         // TODO add your handling code here:
-        Agregar a = new Agregar();
-        jdskPrincipal.add(a);
-        a.setVisible(true);
+       
     }//GEN-LAST:event_jtbnIngPrendaActionPerformed
 
     private void jtbnModPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnModPrendaActionPerformed
         // TODO add your handling code here:
-        Modificar a = new Modificar();
-        jdskPrincipal.add(a);
-        a.setVisible(true);
+       
     }//GEN-LAST:event_jtbnModPrendaActionPerformed
 
     private void jtbnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnCerrarSesionActionPerformed
         // TODO add your handling code here:
-         Loguin login = new Loguin();
-        login.setVisible(true);
-        login.pack();
-        login.setLocationRelativeTo(null);
-        this.dispose();
+         
     }//GEN-LAST:event_jtbnCerrarSesionActionPerformed
+
+
+
+    private void jtbnVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnVentaActionPerformed
+        // TODO add your handling code here:
+
+    private void jtbnIngPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnIngPrendaActionPerformed
+        
+    }//GEN-LAST:event_jtbnIngPrendaActionPerformed
+
+    private void jtbnModPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnModPrendaActionPerformed
+        
+    }//GEN-LAST:event_jtbnModPrendaActionPerformed
+
+    private void jtbnVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnVentaActionPerformed
+    }//GEN-LAST:event_jtbnVentaActionPerformed
+
+
+    private void jtbnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnCerrarSesionActionPerformed
+        
+    }//GEN-LAST:event_jtbnCerrarSesionActionPerformed
+
+
 
     /**
      * @param args the command line arguments
