@@ -10,24 +10,21 @@ package interfaces;
  * @author danie
  */
 public class Principal extends javax.swing.JFrame {
-static String name, cedula;
+    static String ced, name;
+
     /**
      * Creates new form Principal
      */
-   
-     public Principal(String nombre, String ced) {
+    public Principal() {
         initComponents();
-<<<<<<< HEAD
-        jLabel2.setText(nombre);
-        cedula=ced;
-=======
 
     }
 
     public Principal(String nombre, String Cedula) {
         initComponents();
+        ced= Cedula;
+        
 
->>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
     }
 
     /**
@@ -39,17 +36,6 @@ static String name, cedula;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-<<<<<<< HEAD
-        jDesktopPane1 = new javax.swing.JDesktopPane();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-=======
         jdskPrincipal = new javax.swing.JDesktopPane();
         jtbnIngPrenda = new javax.swing.JButton();
         jtbnModPrenda = new javax.swing.JButton();
@@ -58,7 +44,6 @@ static String name, cedula;
         jtbnRegCliente = new javax.swing.JButton();
         jtbnCerrarSesion = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
->>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -84,16 +69,7 @@ static String name, cedula;
             }
         });
 
-<<<<<<< HEAD
-        jButton4.setText("Realizar Venta");
-        jButton4.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton4ActionPerformed(evt);
-            }
-        });
-=======
         jtbnVenta.setText("Realizar Venta");
->>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
 
         jtbnRegCliente.setText("Registrar Cliente");
         jtbnRegCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -111,10 +87,6 @@ static String name, cedula;
             }
         });
 
-        jLabel1.setText("Saludos:");
-
-        jLabel2.setText("Usuario");
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -122,23 +94,6 @@ static String name, cedula;
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-<<<<<<< HEAD
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jButton3)
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                            .addComponent(jButton7, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton4, javax.swing.GroupLayout.PREFERRED_SIZE, 127, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jLabel1)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jLabel2))
-                        .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
-                .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-=======
                     .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jtbnCerrarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(jtbnRegCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -148,20 +103,11 @@ static String name, cedula;
                     .addComponent(jtbnIngPrenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(23, 23, 23)
                 .addComponent(jdskPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
->>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jdskPrincipal)
             .addGroup(layout.createSequentialGroup()
-<<<<<<< HEAD
-                .addGap(23, 23, 23)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel2))
-                .addGap(18, 18, 18)
-                .addComponent(jButton1)
-=======
                 .addGap(55, 55, 55)
                 .addComponent(jtbnIngPrenda)
                 .addGap(39, 39, 39)
@@ -174,7 +120,6 @@ static String name, cedula;
                 .addComponent(jtbnRegCliente)
                 .addGap(48, 48, 48)
                 .addComponent(jButton6)
->>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
                 .addGap(56, 56, 56)
                 .addComponent(jtbnCerrarSesion)
                 .addGap(25, 73, Short.MAX_VALUE))
@@ -183,14 +128,6 @@ static String name, cedula;
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-<<<<<<< HEAD
-    private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
-        // TODO add your handling code here:
-        RegistroVenta rv= new RegistroVenta(cedula);
-        jDesktopPane1.add(rv);
-        rv.setVisible(true);
-    }//GEN-LAST:event_jButton4ActionPerformed
-=======
     private void jtbnRegClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnRegClienteActionPerformed
         RegistroClientes ven1 = new RegistroClientes();
         jdskPrincipal.add(ven1);
@@ -209,7 +146,6 @@ static String name, cedula;
         lista.setVisible(true);
 
     }//GEN-LAST:event_jtbListPrendasActionPerformed
->>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
 
     /**
      * @param args the command line arguments
@@ -242,23 +178,12 @@ static String name, cedula;
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal(name,cedula).setVisible(true);
+                new Principal(name, ced).setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-<<<<<<< HEAD
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JDesktopPane jDesktopPane1;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-=======
     private javax.swing.JButton jButton6;
     private javax.swing.JDesktopPane jdskPrincipal;
     private javax.swing.JButton jtbListPrendas;
@@ -267,6 +192,5 @@ static String name, cedula;
     private javax.swing.JButton jtbnModPrenda;
     private javax.swing.JButton jtbnRegCliente;
     private javax.swing.JButton jtbnVenta;
->>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
     // End of variables declaration//GEN-END:variables
 }
