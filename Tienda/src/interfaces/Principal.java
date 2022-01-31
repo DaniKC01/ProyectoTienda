@@ -167,25 +167,9 @@ public class Principal extends javax.swing.JFrame {
     }//GEN-LAST:event_jtbListPrendasActionPerformed
 
 
-    private void jtbnVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnVentaActionPerformed
-        // TODO add your handling code here:
+   
 
-    private void jtbnIngPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnIngPrendaActionPerformed
-        
-    }//GEN-LAST:event_jtbnIngPrendaActionPerformed
-
-    private void jtbnModPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnModPrendaActionPerformed
-        
-    }//GEN-LAST:event_jtbnModPrendaActionPerformed
-
-    private void jtbnVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnVentaActionPerformed
-    }//GEN-LAST:event_jtbnVentaActionPerformed
-
-
-    private void jtbnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnCerrarSesionActionPerformed
-        
-    }//GEN-LAST:event_jtbnCerrarSesionActionPerformed
-
+    
 
     /**
      * @param args the command line arguments
