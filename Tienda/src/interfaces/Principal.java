@@ -70,6 +70,11 @@ public class Principal extends javax.swing.JFrame {
         });
 
         jtbnVenta.setText("Realizar Venta");
+        jtbnVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtbnVentaActionPerformed(evt);
+            }
+        });
 
         jtbnRegCliente.setText("Registrar Cliente");
         jtbnRegCliente.addActionListener(new java.awt.event.ActionListener() {
@@ -146,6 +151,13 @@ public class Principal extends javax.swing.JFrame {
         lista.setVisible(true);
 
     }//GEN-LAST:event_jtbListPrendasActionPerformed
+
+    private void jtbnVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnVentaActionPerformed
+        // TODO add your handling code here:
+        RegistroVenta a = new RegistroVenta(ced);
+        jdskPrincipal.add(a);
+        a.setVisible(true);
+    }//GEN-LAST:event_jtbnVentaActionPerformed
 
     /**
      * @param args the command line arguments
