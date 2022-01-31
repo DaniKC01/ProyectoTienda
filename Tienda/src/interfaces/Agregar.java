@@ -9,7 +9,6 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import tienda.Prenda;
 
 /**
  *
@@ -18,7 +17,7 @@ import tienda.Prenda;
 public class Agregar extends javax.swing.JFrame {
 
     /**
-     * Creates new form Agregar
+     * Creates new form 
      */
     public Agregar() {
         initComponents();
@@ -193,23 +192,8 @@ public class Agregar extends javax.swing.JFrame {
     }//GEN-LAST:event_txtIngresoTallaActionPerformed
 
     private void btnAgregarPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarPrendaActionPerformed
-       Prenda nuevaPrenda = new Prenda();
-       nuevaPrenda.setTalla((txtIngresoTalla.getText()));
-       nuevaPrenda.setActivo(jchBoxEstaActivo.isSelected());
-       nuevaPrenda.setColor(txtIngresoColor.getText());
-       nuevaPrenda.setPrecio(Float.parseFloat(txtIngresoPrecio.getText()));
-       nuevaPrenda.setCodigo(txtIngresoCodigo.getText());
-       nuevaPrenda.setTipo(txtIngresoTipo.getText());
-                     
-        try {
-           nuevaPrenda.GuardarPrenda(nuevaPrenda);
-           JOptionPane.showMessageDialog(null, "DATOS GUARDADOS CON EXITO");
-           this.limpiarCampos();
-        } catch (SQLException ex) {
-            Logger.getLogger(Agregar.class.getName()).log(Level.SEVERE, null, ex);
-        }
+
        
-        
     }//GEN-LAST:event_btnAgregarPrendaActionPerformed
 
     private void jchBoxEstaActivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchBoxEstaActivoActionPerformed
