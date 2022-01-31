@@ -23,7 +23,7 @@ public class Principal extends javax.swing.JFrame {
     public Principal(String nombre, String Cedula) {
         initComponents();
         ced= Cedula;
-        
+        this.setLocationRelativeTo(null);
 
     }
 
@@ -169,6 +169,29 @@ public class Principal extends javax.swing.JFrame {
 
     private void jtbnVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnVentaActionPerformed
         // TODO add your handling code here:
+        
+       
+    }//GEN-LAST:event_jtbnVentaActionPerformed
+
+    private void jtbnIngPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnIngPrendaActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_jtbnIngPrendaActionPerformed
+
+    private void jtbnModPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnModPrendaActionPerformed
+        // TODO add your handling code here:
+       
+    }//GEN-LAST:event_jtbnModPrendaActionPerformed
+
+    private void jtbnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnCerrarSesionActionPerformed
+        // TODO add your handling code here:
+         
+    }//GEN-LAST:event_jtbnCerrarSesionActionPerformed
+
+
+
+    private void jtbnVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnVentaActionPerformed
+        // TODO add your handling code here:
 
     private void jtbnIngPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnIngPrendaActionPerformed
         
@@ -185,6 +208,7 @@ public class Principal extends javax.swing.JFrame {
     private void jtbnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnCerrarSesionActionPerformed
         
     }//GEN-LAST:event_jtbnCerrarSesionActionPerformed
+
 
 
     /**

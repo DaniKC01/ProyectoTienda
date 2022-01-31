@@ -10,12 +10,14 @@ package interfaces;
  * @author danie
  */
 public class PrincipalVendedor extends javax.swing.JFrame {
-
+static String ced;
     /**
      * Creates new form Principal
      */
-    public PrincipalVendedor() {
+    public PrincipalVendedor(String cedula) {
         initComponents();
+        ced= cedula;
+        this.setLocationRelativeTo(null);
     }
 
     /**
@@ -49,16 +51,46 @@ public class PrincipalVendedor extends javax.swing.JFrame {
         );
 
         jtbnIngPrenda.setText("Ingresar Prenda");
+        jtbnIngPrenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtbnIngPrendaActionPerformed(evt);
+            }
+        });
 
-        jtbnModPrenda.setText("Modificar Prueba");
+        jtbnModPrenda.setText("Modificar Prenda");
+        jtbnModPrenda.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtbnModPrendaActionPerformed(evt);
+            }
+        });
 
         jButton3.setText("Lista de Prendas");
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
 
         jtbnVenta.setText("Realizar Venta");
+        jtbnVenta.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtbnVentaActionPerformed(evt);
+            }
+        });
 
         jtbnRegCliente.setText("Registrar Cliente");
+        jtbnRegCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtbnRegClienteActionPerformed(evt);
+            }
+        });
 
         jtbnCerrarSesion.setText("Cerrar Sesion");
+        jtbnCerrarSesion.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtbnCerrarSesionActionPerformed(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -101,6 +133,50 @@ public class PrincipalVendedor extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void jtbnIngPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnIngPrendaActionPerformed
+        // TODO add your handling code here:
+          Agregar a = new Agregar();
+        jDesktopPane1.add(a);
+        a.setVisible(true);
+    }//GEN-LAST:event_jtbnIngPrendaActionPerformed
+
+    private void jtbnModPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnModPrendaActionPerformed
+        // TODO add your handling code here:
+        Modificar a = new Modificar();
+        jDesktopPane1.add(a);
+        a.setVisible(true);
+    }//GEN-LAST:event_jtbnModPrendaActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        // TODO add your handling code here:
+         ListaPrendas lista = new ListaPrendas();
+        jDesktopPane1.add(lista);
+        lista.setVisible(true);
+    }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jtbnVentaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnVentaActionPerformed
+        // TODO add your handling code here:
+         RegistroVenta a = new RegistroVenta(ced);
+        jDesktopPane1.add(a);
+        a.setVisible(true);
+    }//GEN-LAST:event_jtbnVentaActionPerformed
+
+    private void jtbnRegClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnRegClienteActionPerformed
+        // TODO add your handling code here:
+         RegistroClientes ven1 = new RegistroClientes();
+        jDesktopPane1.add(ven1);
+        ven1.setVisible(true);
+    }//GEN-LAST:event_jtbnRegClienteActionPerformed
+
+    private void jtbnCerrarSesionActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnCerrarSesionActionPerformed
+        // TODO add your handling code here:
+         Loguin login = new Loguin();
+        login.setVisible(true);
+        login.pack();
+        login.setLocationRelativeTo(null);
+        this.dispose();
+    }//GEN-LAST:event_jtbnCerrarSesionActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -134,7 +210,7 @@ public class PrincipalVendedor extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new PrincipalVendedor().setVisible(true);
+                new PrincipalVendedor(ced).setVisible(true);
             }
         });
     }
