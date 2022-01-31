@@ -5,7 +5,9 @@
  */
 package interfaces;
 
+import java.sql.Connection;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
@@ -14,7 +16,7 @@ import javax.swing.JOptionPane;
  *
  * @author Admin
  */
-public class Agregar extends javax.swing.JFrame {
+public class Agregar extends javax.swing.JInternalFrame {
 
     /**
      * Creates new form 
@@ -24,13 +26,13 @@ public class Agregar extends javax.swing.JFrame {
         
     }
     private void limpiarCampos() {
-        txtIngresoCodigo.setText("");
+         txtIngresoCodigo.setText("");
         txtIngresoColor.setText("");
         txtIngresoPrecio.setText("");
         txtIngresoTalla.setText("");
         txtIngresoTipo.setText("");
-        jchBoxEstaActivo.setSelected(true);
-        jchBoxEstaActivo.enableInputMethods(false);
+        txtStock.setText("");
+      
     }
    
 
@@ -58,7 +60,7 @@ public class Agregar extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         txtIngresoColor = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jchBoxEstaActivo = new javax.swing.JCheckBox();
+        txtStock = new javax.swing.JTextField();
 
         jLabel5.setText("jLabel5");
 
@@ -99,85 +101,82 @@ public class Agregar extends javax.swing.JFrame {
 
         jLabel9.setText("ESTA ACTIVO:");
 
-        jchBoxEstaActivo.setSelected(true);
-        jchBoxEstaActivo.setText("  ");
-        jchBoxEstaActivo.setEnabled(false);
-        jchBoxEstaActivo.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jchBoxEstaActivoActionPerformed(evt);
-            }
-        });
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
+                .addGap(0, 177, Short.MAX_VALUE)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(layout.createSequentialGroup()
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                        .addComponent(btnAgregarPrenda)
+                        .addGap(234, 234, 234))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGap(28, 28, 28)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGap(11, 11, 11)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                .addGroup(layout.createSequentialGroup()
                                     .addComponent(jLabel2)
-                                    .addComponent(jLabel4)
-                                    .addComponent(jLabel6)
-                                    .addComponent(jLabel7)))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                                .addContainerGap()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jLabel9)
-                                    .addComponent(jLabel3))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)))
-                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtIngresoCodigo)
-                            .addComponent(txtIngresoTipo)
-                            .addComponent(txtIngresoPrecio, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 123, Short.MAX_VALUE)
-                            .addComponent(txtIngresoTalla, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(txtIngresoColor, javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jchBoxEstaActivo, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addContainerGap(72, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(btnAgregarPrenda)
-                .addGap(124, 124, 124))
+                                    .addGap(22, 22, 22)
+                                    .addComponent(txtIngresoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
+                                    .addGap(3, 3, 3)
+                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jLabel9)
+                                        .addGroup(layout.createSequentialGroup()
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addGroup(layout.createSequentialGroup()
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel3)
+                                                        .addComponent(jLabel7))
+                                                    .addGap(28, 28, 28))
+                                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                        .addComponent(jLabel4)
+                                                        .addComponent(jLabel6))
+                                                    .addGap(18, 18, 18)))
+                                            .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                                .addComponent(txtIngresoPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtIngresoTalla, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtIngresoColor, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                                .addComponent(txtIngresoTipo, javax.swing.GroupLayout.PREFERRED_SIZE, 123, javax.swing.GroupLayout.PREFERRED_SIZE)))))))
+                        .addGap(160, 160, 160))))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 31, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(28, 28, 28)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
                     .addComponent(txtIngresoCodigo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addGap(35, 35, 35)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel4)
                     .addComponent(txtIngresoTipo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(13, 13, 13)
+                .addGap(40, 40, 40)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel6)
-                    .addComponent(txtIngresoPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(txtIngresoPrecio, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel6))
+                .addGap(53, 53, 53)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel7)
-                    .addComponent(txtIngresoColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                    .addComponent(txtIngresoColor, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel7))
+                .addGap(50, 50, 50)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(txtIngresoTalla, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel3))
-                .addGap(18, 18, 18)
+                .addGap(47, 47, 47)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel9)
-                    .addComponent(jchBoxEstaActivo))
-                .addGap(10, 10, 10)
+                    .addComponent(txtStock, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(56, 56, 56)
                 .addComponent(btnAgregarPrenda)
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addGap(59, 59, 59))
         );
 
         pack();
@@ -193,12 +192,28 @@ public class Agregar extends javax.swing.JFrame {
 
     private void btnAgregarPrendaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAgregarPrendaActionPerformed
 
+        conexion cc = new conexion();
+       Connection cn = cc.conectar();
+       Statement psd;
+        try {
+            psd = cn.createStatement();
+            String sql = "INSERT INTO PRENDAS (ID_PRE, TIP_PRE, VAL_UNI,STOCK_PRE ,COL_PRE ,TAL_PRE ) \n"
+                    + "VALUES ('"
+                    + txtIngresoCodigo.getText()  + "','"
+                    +  txtIngresoTipo.getText() + "',"
+                    + Float.parseFloat(txtIngresoPrecio.getText()) + ","
+                    + txtStock.getText() + ",'"
+                     +txtIngresoColor.getText()  + "','"
+                    +txtIngresoTalla.getText()  + "');";
+             int n = psd.executeUpdate(sql);
+           
+           JOptionPane.showMessageDialog(null, "DATOS GUARDADOS CON EXITO");
+           this.limpiarCampos();
+        } catch (SQLException ex) {
+            Logger.getLogger(Agregar.class.getName()).log(Level.SEVERE, null, ex);
+        }
        
     }//GEN-LAST:event_btnAgregarPrendaActionPerformed
-
-    private void jchBoxEstaActivoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jchBoxEstaActivoActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jchBoxEstaActivoActionPerformed
 
     /**
      * @param args the command line arguments
@@ -246,11 +261,11 @@ public class Agregar extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
-    private javax.swing.JCheckBox jchBoxEstaActivo;
     private javax.swing.JTextField txtIngresoCodigo;
     private javax.swing.JTextField txtIngresoColor;
     private javax.swing.JTextField txtIngresoPrecio;
     private javax.swing.JTextField txtIngresoTalla;
     private javax.swing.JTextField txtIngresoTipo;
+    private javax.swing.JTextField txtStock;
     // End of variables declaration//GEN-END:variables
 }
