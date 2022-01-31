@@ -82,11 +82,17 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Ingresar Prenda"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtbnIngPrendaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jtbnModPrenda">
       <Properties>
         <Property name="text" type="java.lang.String" value="Modificar Prueba"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtbnModPrendaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jtbListPrendas">
       <Properties>
@@ -100,6 +106,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Realizar Venta"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtbnVentaActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jtbnRegCliente">
       <Properties>
@@ -113,6 +122,9 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="Cerrar Sesion"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jtbnCerrarSesionActionPerformed"/>
+      </Events>
     </Component>
     <Component class="javax.swing.JButton" name="jButton6">
       <Properties>

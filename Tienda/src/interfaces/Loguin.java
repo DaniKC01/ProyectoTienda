@@ -15,15 +15,19 @@ import javax.swing.JOptionPane;
  * @author winas
  */
 public class Loguin extends javax.swing.JFrame {
-     static String name, ced;
+
+    static String name, ced;
 
     /**
      * Creates new form Loguin
      */
     public Loguin() {
         initComponents();
+        this.setLocationRelativeTo(null);
     }
-      private boolean sesion() {
+
+    private String sesion() {
+        String cuenta = "";
 
         try {
             conexion cc = new conexion();
@@ -34,28 +38,35 @@ public class Loguin extends javax.swing.JFrame {
             //PREPARAR EL STATAMENT
             Statement psd = cn.createStatement();
             ResultSet rs = psd.executeQuery(sql);
-           
-            
-                
-                while (rs.next()) {
 
-                    if (rs.getString("PASS_USU").equals(jpwfContraseña.getText().toString())) {
+            while (rs.next()) {
 
+                if (rs.getString("PASS_USU").equals(jpwfContraseña.getText().toString())) {
+                    if (rs.getString("TIP_USU").equals("ADM")) {
                         name = rs.getString("NOM_USU");
                         ced = rs.getString("CED_USU");
-                        return true;
+                        cuenta="ADM";
+                        
+                    } else if(rs.getString("TIP_USU").equals("Vendedor") ){
+                        
+                        name = rs.getString("NOM_USU");
+                        ced = rs.getString("CED_USU");
+                        
+                        cuenta="Vendedor";
 
-                    } else {
-                        JOptionPane.showMessageDialog(null, "LA CONTRASEÑA NO COINCIDE");
                     }
+                    
 
+                } else {
+                    JOptionPane.showMessageDialog(null, "LA CONTRASEÑA NO COINCIDE");
                 }
-            
+
+            }
 
         } catch (Exception e) {
             JOptionPane.showMessageDialog(null, "No se encontro el Usuario \n");
         }
-        return false;
+        return cuenta;
 
     }
 
@@ -148,11 +159,17 @@ public class Loguin extends javax.swing.JFrame {
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         // TODO add your handling code here:
-        if (sesion()) {
+        if (sesion().equals("ADM")) {
             Principal p = new Principal(name, ced);
             p.setVisible(true);
             this.dispose();
-        }else{
+        } else if(sesion().equals("Vendedor")) {
+            PrincipalVendedor p= new PrincipalVendedor(ced);
+             p.setVisible(true);
+                this.dispose();
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Datos erróneos");
             limpiarCampos();
         }
     }//GEN-LAST:event_jButton1ActionPerformed
