@@ -131,9 +131,6 @@
       <Properties>
         <Property name="text" type="java.lang.String" value="INGRESE EL CODIGO: "/>
       </Properties>
-      <AccessibilityProperties>
-        <Property name="AccessibleContext.accessibleName" type="java.lang.String" value="INGRESE EL CODIGO: "/>
-      </AccessibilityProperties>
     </Component>
     <Component class="javax.swing.JTextField" name="txtCodigo">
     </Component>

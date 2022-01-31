@@ -9,7 +9,7 @@ import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.JOptionPane;
-import tienda.Prenda;
+
 
 /**
  *
@@ -174,38 +174,13 @@ public class Modificar extends javax.swing.JFrame {
 
     private void btnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnBuscarActionPerformed
         // TODO add your  code here:
-       Prenda prenda = new Prenda();
-     
-        try {
-            prenda = prenda.BuscaPrendaCodigoParaDetalle(txtCodigo.getText());
-             txtModificarTipo.setText(prenda.getTipo());
-             txtPrecio.setText(Float.toString(prenda.getPrecio()));
-            txtModificarColor.setText(prenda.getColor());
-            txtModificarTalla.setText(prenda.getTalla());
-            jchBoxActivo.setSelected(prenda.getActivo());
-            
-            
-        } catch (SQLException ex) {
-            Logger.getLogger(Modificar.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+       
+       
     }//GEN-LAST:event_btnBuscarActionPerformed
 
     private void btnActualizarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnActualizarActionPerformed
         // TODO add your handling 
-        Prenda prenda = new Prenda();
-        try {
-            prenda.setActivo(jchBoxActivo.isSelected());
-            prenda.setCodigo(txtCodigo.getText());
-            prenda.setColor(txtModificarColor.getText());
-            prenda.setTalla(txtModificarTalla.getText());
-            prenda.setTipo(txtModificarTipo.getText());
-            prenda.setPrecio(Float.parseFloat(txtPrecio.getText()));
-            prenda.GuardarPrenda(prenda);
-            JOptionPane.showMessageDialog(null, "DATOS ACTUALIZADOS CON EXITO");
-        } catch (SQLException ex) {
-            Logger.getLogger(Modificar.class.getName()).log(Level.SEVERE, null, ex);
-        }
+       
         
     }//GEN-LAST:event_btnActualizarActionPerformed
 

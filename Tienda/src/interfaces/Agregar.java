@@ -17,7 +17,7 @@ import javax.swing.JOptionPane;
 public class Agregar extends javax.swing.JFrame {
 
     /**
-     * Creates new form Agregar
+     * Creates new form 
      */
     public Agregar() {
         initComponents();
