@@ -3,8 +3,19 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< HEAD
+            <file>file:/C:/Users/winas/ProGIT/ProyectoTienda/Tienda/src/interfaces/Loguin.java</file>
+            <file>file:/C:/Users/winas/ProGIT/ProyectoTienda/Tienda/src/interfaces/PrincipalVendedor.java</file>
+            <file>file:/C:/Users/winas/ProGIT/ProyectoTienda/Tienda/src/interfaces/RegistroVenta.java</file>
+            <file>file:/C:/Users/winas/ProGIT/ProyectoTienda/Tienda/src/interfaces/conexion.java</file>
+            <file>file:/C:/Users/winas/ProGIT/ProyectoTienda/Tienda/src/interfaces/Principal.java</file>
+=======
+            <file>file:/C:/Users/danie/Desktop/4to%20semestre/Proyecto%20Tienda/Tienda/src/interfaces/RegistroVendedores.java</file>
+            <file>file:/C:/Users/danie/Desktop/4to%20semestre/Proyecto%20Tienda/Tienda/src/interfaces/Loguin.java</file>
             <file>file:/C:/Users/danie/Desktop/4to%20semestre/Proyecto%20Tienda/Tienda/src/interfaces/PrincipalVendedor.java</file>
             <file>file:/C:/Users/danie/Desktop/4to%20semestre/Proyecto%20Tienda/Tienda/src/interfaces/Principal.java</file>
+            <file>file:/C:/Users/danie/Desktop/4to%20semestre/Proyecto%20Tienda/Tienda/src/interfaces/RegistroClientes.java</file>
+>>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
         </group>
     </open-files>
 </project-private>
