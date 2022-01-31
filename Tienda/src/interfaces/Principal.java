@@ -10,6 +10,7 @@ package interfaces;
  * @author danie
  */
 public class Principal extends javax.swing.JFrame {
+    static String ced, name;
 
     /**
      * Creates new form Principal
@@ -21,6 +22,8 @@ public class Principal extends javax.swing.JFrame {
 
     public Principal(String nombre, String Cedula) {
         initComponents();
+        ced= Cedula;
+        
 
     }
 
@@ -175,7 +178,7 @@ public class Principal extends javax.swing.JFrame {
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new Principal().setVisible(true);
+                new Principal(name, ced).setVisible(true);
             }
         });
     }

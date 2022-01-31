@@ -28,5 +28,5 @@ public class conexion {
             JOptionPane.showMessageDialog(null,"Error"+ ex);
         }
         return connect;
-    }
+    }   
 }
