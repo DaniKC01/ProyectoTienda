@@ -5,8 +5,6 @@ package interfaces;
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-
-
 /**
  *
  * @author danie
@@ -19,8 +17,17 @@ static String name, cedula;
    
      public Principal(String nombre, String ced) {
         initComponents();
+<<<<<<< HEAD
         jLabel2.setText(nombre);
         cedula=ced;
+=======
+
+    }
+
+    public Principal(String nombre, String Cedula) {
+        initComponents();
+
+>>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
     }
 
     /**
@@ -32,6 +39,7 @@ static String name, cedula;
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+<<<<<<< HEAD
         jDesktopPane1 = new javax.swing.JDesktopPane();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -41,36 +49,67 @@ static String name, cedula;
         jButton7 = new javax.swing.JButton();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+=======
+        jdskPrincipal = new javax.swing.JDesktopPane();
+        jtbnIngPrenda = new javax.swing.JButton();
+        jtbnModPrenda = new javax.swing.JButton();
+        jtbListPrendas = new javax.swing.JButton();
+        jtbnVenta = new javax.swing.JButton();
+        jtbnRegCliente = new javax.swing.JButton();
+        jtbnCerrarSesion = new javax.swing.JButton();
+        jButton6 = new javax.swing.JButton();
+>>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
-        javax.swing.GroupLayout jDesktopPane1Layout = new javax.swing.GroupLayout(jDesktopPane1);
-        jDesktopPane1.setLayout(jDesktopPane1Layout);
-        jDesktopPane1Layout.setHorizontalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        javax.swing.GroupLayout jdskPrincipalLayout = new javax.swing.GroupLayout(jdskPrincipal);
+        jdskPrincipal.setLayout(jdskPrincipalLayout);
+        jdskPrincipalLayout.setHorizontalGroup(
+            jdskPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 674, Short.MAX_VALUE)
         );
-        jDesktopPane1Layout.setVerticalGroup(
-            jDesktopPane1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+        jdskPrincipalLayout.setVerticalGroup(
+            jdskPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jButton1.setText("Ingresar Prenda");
+        jtbnIngPrenda.setText("Ingresar Prenda");
 
-        jButton2.setText("Modificar Prueba");
+        jtbnModPrenda.setText("Modificar Prueba");
 
-        jButton3.setText("Lista de Prendas");
+        jtbListPrendas.setText("Lista de Prendas");
+        jtbListPrendas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtbListPrendasActionPerformed(evt);
+            }
+        });
 
+<<<<<<< HEAD
         jButton4.setText("Realizar Venta");
         jButton4.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton4ActionPerformed(evt);
             }
         });
+=======
+        jtbnVenta.setText("Realizar Venta");
+>>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
 
-        jButton5.setText("Registrar Cliente");
+        jtbnRegCliente.setText("Registrar Cliente");
+        jtbnRegCliente.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jtbnRegClienteActionPerformed(evt);
+            }
+        });
 
-        jButton7.setText("Cerrar Sesion");
+        jtbnCerrarSesion.setText("Cerrar Sesion");
+
+        jButton6.setText("Registro Vendedores");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jLabel1.setText("Saludos:");
 
@@ -81,8 +120,9 @@ static String name, cedula;
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(25, 25, 25)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+<<<<<<< HEAD
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addComponent(jButton3)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
@@ -98,39 +138,78 @@ static String name, cedula;
                         .addComponent(jButton2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 32, Short.MAX_VALUE)
                 .addComponent(jDesktopPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+=======
+                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtbnCerrarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtbnRegCliente, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtbnVenta, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtbListPrendas, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtbnModPrenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jtbnIngPrenda, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGap(23, 23, 23)
+                .addComponent(jdskPrincipal, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+>>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jDesktopPane1)
+            .addComponent(jdskPrincipal)
             .addGroup(layout.createSequentialGroup()
+<<<<<<< HEAD
                 .addGap(23, 23, 23)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel1)
                     .addComponent(jLabel2))
                 .addGap(18, 18, 18)
                 .addComponent(jButton1)
+=======
+                .addGap(55, 55, 55)
+                .addComponent(jtbnIngPrenda)
+                .addGap(39, 39, 39)
+                .addComponent(jtbnModPrenda)
+                .addGap(52, 52, 52)
+                .addComponent(jtbListPrendas)
+                .addGap(53, 53, 53)
+                .addComponent(jtbnVenta)
+                .addGap(48, 48, 48)
+                .addComponent(jtbnRegCliente)
+                .addGap(48, 48, 48)
+                .addComponent(jButton6)
+>>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
                 .addGap(56, 56, 56)
-                .addComponent(jButton2)
-                .addGap(59, 59, 59)
-                .addComponent(jButton3)
-                .addGap(47, 47, 47)
-                .addComponent(jButton4)
-                .addGap(60, 60, 60)
-                .addComponent(jButton5)
-                .addGap(56, 56, 56)
-                .addComponent(jButton7)
-                .addContainerGap(116, Short.MAX_VALUE))
+                .addComponent(jtbnCerrarSesion)
+                .addGap(25, 73, Short.MAX_VALUE))
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+<<<<<<< HEAD
     private void jButton4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton4ActionPerformed
         // TODO add your handling code here:
         RegistroVenta rv= new RegistroVenta(cedula);
         jDesktopPane1.add(rv);
         rv.setVisible(true);
     }//GEN-LAST:event_jButton4ActionPerformed
+=======
+    private void jtbnRegClienteActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbnRegClienteActionPerformed
+        RegistroClientes ven1 = new RegistroClientes();
+        jdskPrincipal.add(ven1);
+        ven1.setVisible(true);
+    }//GEN-LAST:event_jtbnRegClienteActionPerformed
+
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        RegistroVendedores ven1 = new RegistroVendedores();
+        jdskPrincipal.add(ven1);
+        ven1.setVisible(true);
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    private void jtbListPrendasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jtbListPrendasActionPerformed
+        ListaPrendas lista = new ListaPrendas();
+        jdskPrincipal.add(lista);
+        lista.setVisible(true);
+
+    }//GEN-LAST:event_jtbListPrendasActionPerformed
+>>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
 
     /**
      * @param args the command line arguments
@@ -169,6 +248,7 @@ static String name, cedula;
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+<<<<<<< HEAD
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
@@ -178,5 +258,15 @@ static String name, cedula;
     private javax.swing.JDesktopPane jDesktopPane1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+=======
+    private javax.swing.JButton jButton6;
+    private javax.swing.JDesktopPane jdskPrincipal;
+    private javax.swing.JButton jtbListPrendas;
+    private javax.swing.JButton jtbnCerrarSesion;
+    private javax.swing.JButton jtbnIngPrenda;
+    private javax.swing.JButton jtbnModPrenda;
+    private javax.swing.JButton jtbnRegCliente;
+    private javax.swing.JButton jtbnVenta;
+>>>>>>> 50a24a8381893ad4b28e22be2d40302a24d7c5e7
     // End of variables declaration//GEN-END:variables
 }
